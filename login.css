@@ -1,0 +1,224 @@
+/* GENERAL PAGE SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* MAIN CONTAINER */
+
+.auth-container {
+    width: 100%;
+    max-width: 950px;
+    min-height: 560px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* BRAND SECTION */
+
+.brand-section {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    padding: 60px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.brand-section h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.brand-section p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.brand-icon {
+    margin-top: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* FORM SECTION */
+
+.form-section {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 360px;
+}
+
+.form-box h2 {
+    color: #1e3a8a;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.form-box label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-box input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 4px rgba(37, 99, 235, 0.3);
+}
+
+/* PASSWORD */
+
+.password-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.password-box input {
+    flex: 1;
+    min-width: 0;
+}
+
+.show-btn {
+    padding: 11px 8px;
+    border: none;
+    background: #e5e7eb;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* BUTTON */
+
+.primary-btn {
+    width: 100%;
+    padding: 13px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    margin-top: 22px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background: #1e40af;
+}
+
+/* LINKS */
+
+.switch-text {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+    color: #666;
+}
+
+.switch-text a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}
+
+/* MESSAGES */
+
+.message {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+/* HIDE FORM */
+
+.hidden {
+    display: none;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-section {
+        padding: 30px 20px;
+    }
+
+    .brand-section h1 {
+        font-size: 23px;
+    }
+
+    .brand-icon {
+        width: 75px;
+        height: 75px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .form-section {
+        padding: 30px 22px;
+    }
+}

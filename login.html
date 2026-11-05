@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="brand-section">
+            <h1>Employee Management</h1>
+            <p>Manage your workplace efficiently.</p>
+            <div class="brand-icon">EMS</div>
+        </div>
+
+        <div class="form-section">
+
+            <!-- LOGIN FORM -->
+            <div id="loginForm" class="form-box">
+                <h2>Welcome Back!</h2>
+                <p class="subtitle">Login to your account</p>
+
+                <form id="loginFormElement">
+
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+
+                    <label for="loginPassword">Password</label>
+                    <div class="password-box">
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                        <button type="button" class="show-btn" onclick="togglePassword('loginPassword')">
+                            Show
+                        </button>
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Login
+                    </button>
+
+                    <p id="loginMessage" class="message"></p>
+                </form>
+
+                <p class="switch-text">
+                    Don't have an account?
+                    <a href="#" id="showRegister">Register here</a>
+                </p>
+            </div>
+
+            <!-- REGISTRATION FORM -->
+            <div id="registerForm" class="form-box hidden">
+                <h2>Create Account</h2>
+                <p class="subtitle">Register as a new user</p>
+
+                <form id="registerFormElement">
+
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" placeholder="Enter your full name" minlength="3" required>
+
+                    <label for="registerEmail">Email Address</label>
+                    <input type="email" id="registerEmail" placeholder="Enter your email" required>
+
+                    <label for="registerPassword">Password</label>
+                    <div class="password-box">
+                        <input type="password" id="registerPassword" placeholder="Create password" minlength="6"
+                            required>
+                        <button type="button" class="show-btn" onclick="togglePassword('registerPassword')">
+                            Show
+                        </button>
+                    </div>
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+
+                    <button type="submit" class="primary-btn">
+                        Register
+                    </button>
+
+                    <p id="registerMessage" class="message"></p>
+                </form>
+
+                <p class="switch-text">
+                    Already have an account?
+                    <a href="#" id="showLogin">Login here</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
