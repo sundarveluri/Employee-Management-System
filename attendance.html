@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance Management</title>
+
+    <link rel="stylesheet" href="attendance.css">
+</head>
+
+<body>
+
+    <header class="top-header">
+
+        <h1>Employee Management System</h1>
+
+        <a href="index.html">Dashboard</a>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="page-heading">
+
+            <h2>Attendance Management</h2>
+
+            <p>Record and manage employee attendance.</p>
+
+        </section>
+
+
+        <!-- ATTENDANCE SUMMARY -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card">
+
+                <h3>Total Records</h3>
+
+                <p id="totalRecords">0</p>
+
+            </div>
+
+            <div class="summary-card present-card">
+
+                <h3>Present</h3>
+
+                <p id="presentCount">0</p>
+
+            </div>
+
+            <div class="summary-card absent-card">
+
+                <h3>Absent</h3>
+
+                <p id="absentCount">0</p>
+
+            </div>
+
+            <div class="summary-card leave-card">
+
+                <h3>On Leave</h3>
+
+                <p id="leaveCount">0</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MARK ATTENDANCE -->
+
+        <section class="card">
+
+            <h3>Mark Employee Attendance</h3>
+
+            <form id="attendanceForm">
+
+                <div class="form-grid">
+
+                    <div>
+
+                        <label for="attendanceEmployee">
+                            Select Employee
+                        </label>
+
+                        <select id="attendanceEmployee" required>
+
+                            <option value="">
+                                Select Employee
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="attendanceDate">
+                            Attendance Date
+                        </label>
+
+                        <input type="date"
+                               id="attendanceDate"
+                               required>
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="attendanceStatus">
+                            Attendance Status
+                        </label>
+
+                        <select id="attendanceStatus" required>
+
+                            <option value="Present">Present</option>
+
+                            <option value="Absent">Absent</option>
+
+                            <option value="Leave">Leave</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="primary-btn">
+                    Mark Attendance
+                </button>
+
+                <p id="attendanceMessage" class="message"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- ATTENDANCE TABLE -->
+
+        <section class="card">
+
+            <div class="table-heading">
+
+                <h3>Attendance Records</h3>
+
+                <input type="search"
+                       id="searchAttendance"
+                       placeholder="Search employee...">
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee ID</th>
+
+                            <th>Employee Name</th>
+
+                            <th>Date</th>
+
+                            <th>Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="attendanceTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p id="emptyAttendance">
+                No attendance records found.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="attendance.js"></script>
+
+</body>
+</html>
