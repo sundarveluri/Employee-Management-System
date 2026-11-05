@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <h1>Employee Management System</h1>
+        <a href="index.html" class="nav-link">Dashboard</a>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <h2>Employee Management</h2>
+            <p>Add, view, update and delete employee details.</p>
+        </section>
+
+        <!-- EMPLOYEE FORM -->
+
+        <section class="card">
+
+            <h3 id="formTitle">Add New Employee</h3>
+
+            <form id="employeeForm">
+
+                <input type="hidden" id="employeeId">
+
+                <div class="form-grid">
+
+                    <div>
+                        <label for="employeeName">Full Name</label>
+                        <input type="text" id="employeeName"
+                               placeholder="Enter employee name" required>
+                    </div>
+
+                    <div>
+                        <label for="employeeEmail">Email</label>
+                        <input type="email" id="employeeEmail"
+                               placeholder="Enter email" required>
+                    </div>
+
+                    <div>
+                        <label for="employeeDepartment">Department</label>
+                        <select id="employeeDepartment" required>
+                            <option value="">Select Department</option>
+                            <option value="IT">IT</option>
+                            <option value="HR">HR</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Sales">Sales</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="employeeDesignation">Designation</label>
+                        <input type="text" id="employeeDesignation"
+                               placeholder="Enter designation" required>
+                    </div>
+
+                    <div>
+                        <label for="employeeSalary">Salary</label>
+                        <input type="number" id="employeeSalary"
+                               placeholder="Enter salary" min="0" required>
+                    </div>
+
+                    <div>
+                        <label for="employeePhone">Phone Number</label>
+                        <input type="tel" id="employeePhone"
+                               placeholder="Enter phone number" required>
+                    </div>
+
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" id="submitBtn">
+                        Add Employee
+                    </button>
+
+                    <button type="button" id="cancelBtn"
+                            class="cancel-btn" hidden>
+                        Cancel
+                    </button>
+                </div>
+
+                <p id="employeeMessage" class="message"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- EMPLOYEE TABLE -->
+
+        <section class="card">
+
+            <div class="table-heading">
+
+                <h3>Employee List</h3>
+
+                <input type="search" id="searchEmployee"
+                       placeholder="Search employee...">
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Designation</th>
+                            <th>Salary</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="employeeTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p id="emptyMessage">No employees added yet.</p>
+
+        </section>
+
+    </main>
+
+    <script src="employee.js"></script>
+</body>
+</html>
